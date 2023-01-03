@@ -58,7 +58,7 @@ for k, v in pairs(Config.Locations.Stash) do
                         return true
                     end
                 end,
-                stash = v.gang,
+                stash = v.label,
                 size = v.size,
                 slots = v.slots,
                 raidtime = v.raidtime,
