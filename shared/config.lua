@@ -18,38 +18,38 @@ Config.CoreSettings = {
 -- Location settings
 Config.Locations = {
     Management = {
-        --[[
-            NOTES: 
-
-            - GANG = YOUR GANG NAME IN SHARED
-            - GRADE = GRADE ABLE TO VIEW TARGET OPTION - STILL REQUIRES BOSS ACCESS TO OPEN
-            - COORDS = LOCATION OF GANG MANAGEMENT
-        ]]
-        {gang = 'lostmc', grade = 3, coords = vector3(973.66, -97.87, 74.87), radius = 0.5, debugPoly = true, useZ = true, distance = 1.5},
+        ['lostmc'] = { -- Ensure gang name here matches your shared/gangs.lua
+            grade = 0, -- Grade able to view target option, they still require boss access to open
+            coords = vector3(977.2, -104.19, 74.85), -- Coords for circlezone
+            radius = 0.5, -- Radius of circlezone
+            distance = 1.5, -- Distance zone can be targeted
+            useZ = true, -- Use Z coord above to place zone
+            debugPoly = true -- Debug zone
+        }
     },
     Stash = {
-        --[[
-            NOTES: 
-
-            - GANG = YOUR GANG NAME IN SHARED
-            - GRADE = GRADE ABLE TO VIEW TARGET OPTION AND FORCE ENTRY
-            - LABEL = NAME OF STASH TO BE USED
-            - SIZE = STASH STORAGE SIZE
-            - SLOTS = STASH SLOT AMOUNT
-            - RAIDTIME = AMOUNT OF TIME TAKE FOR SERVICE JOBS TO FORCE ENTRY
-            - COORDS = LOCATION OF GANG MANAGEMENT
-        ]]
-        {gang = 'lostmc', grade = 1, label = 'Lost MC', size = 100000, slots = 30, raidtime = math.random(8,15), coords = vector3(977.2, -104.19, 74.85), radius = 0.5, debugPoly = true, useZ = true, distance = 1.5},
+        ['lostmc'] = { -- Ensure gang name here matches your shared/gangs.lua
+            label = 'Lost MC Stash', -- Label used by inventory
+            grade = 0, -- Grade able to view target option
+            size = 100000, -- Stash storage size
+            slots = 30, -- Stash storage slots
+            raidtime = math.random(10,20), -- Time taken for service jobs to raid stash
+            coords = vector3(977.2, -104.19, 74.85), -- Coords for circlezone
+            radius = 0.5, -- Radius of circlezone
+            distance = 1.5, -- Distance zone can be targeted
+            useZ = true, -- Use Z coord above to place zone
+            debugPoly = true -- Debug zone
+        }
     },
     Wardrobe = {
-        --[[
-            NOTES: 
-
-            - GANG = YOUR GANG NAME IN SHARED
-            - GRADE = GRADE ABLE TO VIEW TARGET OPTION
-            - COORDS = LOCATION OF GANG MANAGEMENT
-        ]]
-        {gang = 'lostmc', grade = 0, coords = vector3(987.05, -92.96, 74.85), radius = 0.5, debugPoly = true, useZ = true, distance = 1.5},
+        ['lostmc'] = { -- Ensure gang name here matches your shared/gangs.lua
+            grade = 0, -- Grade able to view target option
+            coords = vector3(977.2, -104.19, 74.85), -- Coords for circlezone
+            radius = 0.5, -- Radius of circlezone
+            distance = 1.5, -- Distance zone can be targeted
+            useZ = true, -- Use Z coord above to place zone
+            debugPoly = true -- Debug zone
+        }
     }
 }
 
