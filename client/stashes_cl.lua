@@ -33,8 +33,8 @@ end
 --<!>-- TARGETING --<!>--
 for k, v in pairs(Config.Locations.Stash) do
     local player = PlayerPedId()
-    exports[TargetName]:AddCircleZone(v.gang..'_stash', v.coords, v.radius, { 
-            name= v.gang..'_stash', 
+    exports[TargetName]:AddCircleZone('gangstash_'..k, v.coords, v.radius, { 
+            name= 'gangstash_'..k, 
             debugPoly= v.debugPoly, 
             useZ= v.useZ, 
         },{ 
@@ -43,7 +43,7 @@ for k, v in pairs(Config.Locations.Stash) do
                 event = 'boii-ganglocs:cl:OpenStash',
                 icon = Language.Targeting['stashicon'],
                 label = Language.Targeting['stashlabel'],
-                gang = {[v.gang] = v.grade},
+                gang = {[k] = v.grade},
                 stash = v.label,
                 size = v.size,
                 slots = v.slots,
