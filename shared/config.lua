@@ -8,11 +8,11 @@ Config.Debug = false -- Enables/disables debug messages
 
 -- Core settings for renamed cores
 Config.CoreSettings = {
-    Core = 'BOII', -- The name of your core. Default; QBCore
-    CoreFolder = 'boii-core', -- The name of your core folder. Default; qb-core
-    TargetName = 'boii-target', -- The name of your third eye targeting. Default; qb-target
-    ManagementEvent = 'boii-gangmenu:client:OpenMenu', -- Name of your boss menu event. Default; 'qb-gangmenu:client:OpenMenu'
-    ClothingEvent = 'boii-clothing:client:openOutfitMenu', -- The name of your clothing event this is needed to open outfit menu. Default; 'qb-clothing:client:OpenOutfitMenu'
+    Core = 'QBCore', -- The name of your core. Default; QBCore
+    CoreFolder = 'qb-core', -- The name of your core folder. Default; qb-core
+    TargetName = 'qb-target', -- The name of your third eye targeting. Default; qb-target
+    ManagementEvent = 'qb-gangmenu:client:OpenMenu', -- Name of your boss menu event. Default; 'qb-gangmenu:client:OpenMenu'
+    ClothingEvent = 'qb-clothing:client:openOutfitMenu', -- The name of your clothing event this is needed to open outfit menu. Default; 'qb-clothing:client:OpenOutfitMenu'
 }
 
 -- Location settings
