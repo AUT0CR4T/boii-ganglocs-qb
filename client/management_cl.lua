@@ -12,8 +12,8 @@ local ManagementEvent = Config.CoreSettings.ManagementEvent
 
 --<!>-- TARGETING --<!>--
 for k, v in pairs(Config.Locations.Management) do
-    exports[TargetName]:AddCircleZone(v.gang..'_management', v.coords, v.radius, { 
-            name= v.gang..'_management', 
+    exports[TargetName]:AddCircleZone('gangmanage_'..k, v.coords, v.radius, { 
+            name= 'gangmanage_'..k, 
             debugPoly= v.debugPoly, 
             useZ= v.useZ, 
         },{ 
@@ -22,7 +22,7 @@ for k, v in pairs(Config.Locations.Management) do
                 event = ManagementEvent,
                 icon = Language.Targeting['managementicon'],
                 label = Language.Targeting['managementlabel'],
-                gang = {[v.gang] = v.grade}
+                gang = {[k] = v.grade}
             },
         },
         distance = v.distance
