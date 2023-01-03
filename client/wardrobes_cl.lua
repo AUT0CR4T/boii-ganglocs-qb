@@ -12,8 +12,8 @@ local ClothingEvent = Config.CoreSettings.ClothingEvent
 
 --<!>-- TARGETING --<!>--
 for k, v in pairs(Config.Locations.Wardrobe) do
-    exports[TargetName]:AddCircleZone(v.gang..'_wardrobe', v.coords, v.radius, { 
-            name= v.gang..'_wardrobe', 
+    exports[TargetName]:AddCircleZone('gangwardrobe_'..k, v.coords, v.radius, { 
+            name= 'gangwardrobe_'..k, 
             debugPoly= v.debugPoly, 
             useZ= v.useZ, 
         },{ 
@@ -22,7 +22,7 @@ for k, v in pairs(Config.Locations.Wardrobe) do
                 event = ClothingEvent,
                 icon = Language.Targeting['wardrobeicon'],
                 label = Language.Targeting['wardrobelabel'],
-                gang = {[v.gang] = v.grade}
+                gang = {[k] = v.grade}
             },
         },
         distance = v.distance
