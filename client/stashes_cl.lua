@@ -76,8 +76,8 @@ RegisterNetEvent('boii-ganglocs:cl:OpenStash', function(data)
     if not data.force then
         TriggerEvent('inventory:client:SetCurrentStash', data.stash)
         TriggerServerEvent('inventory:server:OpenInventory', 'stash', data.stash, {
-            maxweight = data.storagesize,
-            slots = data.storageslots,
+            maxweight = data.size,
+            slots = data.slots,
         })
     else
         Core.Functions.Progressbar(data.stash, Language.Stashes['forceentry'], data.raidtime*1000, false, true, {
@@ -92,8 +92,8 @@ RegisterNetEvent('boii-ganglocs:cl:OpenStash', function(data)
         }, {}, {}, function()
             TriggerEvent('inventory:client:SetCurrentStash', data.stash)
             TriggerServerEvent('inventory:server:OpenInventory', 'stash', data.stash, {
-                maxweight = data.storagesize,
-                slots = data.storageslots,
+                maxweight = data.size,
+                slots = data.slots,
             })
             ClearPedTasks(player)
         end, function()
